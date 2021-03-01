@@ -1,6 +1,6 @@
-package Proxy;
+package proxy;
 
-import Utils.RpcClient;
+import utils.RpcClient;
 import entity.RpcRequest;
 import entity.RpcResponse;
 import org.slf4j.Logger;
@@ -42,7 +42,7 @@ public class RpcClientProxy implements InvocationHandler {
         if(response.getCode() != 0){
             logger.error("#RpcClientProxy#返回码异常，request = " + request.toString());
         }
-        return ((RpcResponse)client.sendRequest(request,port,address)).getData();
+        return response.getData();
     }
 
     public int getPort() {

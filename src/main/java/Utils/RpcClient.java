@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 import entity.RpcRequest;
 import org.slf4j.Logger;
